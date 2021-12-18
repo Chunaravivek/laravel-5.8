@@ -1,0 +1,29 @@
+#example2 a.btn.btn-sm.btn-app.bg-info, 
+#example2 a.btn.btn-sm.btn-app.bg-success, 
+#example2 a.btn.btn-sm.btn-app.bg-danger {
+    font-size: 8px !important;
+    height: 30px !important;
+    min-width: 40px !important;
+}
+
+#example2 a.btn.btn-sm.btn-app.bg-info > i.fas.fa-info, 
+#example2 a.btn.btn-sm.btn-app.bg-success > i.fas.fa-edit, 
+#example2 a.btn.btn-sm.btn-app.bg-danger > i.fas.fa-minus-circle {
+    font-size: 14px !important;
+    line-height: 3px;
+}
+
+#table a.btn.btn-sm.btn-app.bg-info, 
+#table a.btn.btn-sm.btn-app.bg-success, 
+#table a.btn.btn-sm.btn-app.bg-danger {
+    font-size: 8px !important;
+    height: 30px !important;
+    min-width: 40px !important;
+}
+
+#table a.btn.btn-sm.btn-app.bg-info > i.fas.fa-info, 
+#table a.btn.btn-sm.btn-app.bg-success > i.fas.fa-edit, 
+#table a.btn.btn-sm.btn-app.bg-danger > i.fas.fa-minus-circle {
+    font-size: 14px !important;
+    line-height: 3px;
+}

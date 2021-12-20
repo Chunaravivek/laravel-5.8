@@ -6,4 +6,4 @@
  * and open the template in the editor.
  */
 
-if (!defined('BASE_PATH')) define('BASE_PATH', 'http://localhost:8001/');
+if (!defined('BASE_PATH')) define('BASE_PATH', 'http://localhost:8000/');

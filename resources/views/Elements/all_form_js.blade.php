@@ -28,13 +28,26 @@
 <!-- Bootstrap Switch -->
 <script src="<?php echo BASE_PATH ?>plugins/bootstrap-switch/js/bootstrap-switch.js"></script>
 <script src="<?php echo BASE_PATH ?>plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
-
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>-->
+<script src="<?php echo BASE_PATH ?>plugins/toastr/toastr.min.js"></script>
 
 
 <!-- ChartJS -->
 <script src="<?php echo BASE_PATH ?>plugins/chart.js/Chart.min.js"></script>
 <script>
   $.widget.bridge('uibutton', $.ui.button);
+  
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
 </script>
 
 

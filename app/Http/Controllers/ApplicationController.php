@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 
-BASE_PATH . '/vendor/Nelexa_gplay/autoload.php';
-base_path() . '/vendor/googleplayscraper/autoload.php';
+include base_path() . '/vendor/Nelexa_gplay/autoload.php';
+include base_path() . '/vendor/googleplayscraper/autoload.php';
 
 use App\Application;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+use Raulr\GooglePlayScraper\Scraper;
+
 use Session;
 
 class ApplicationController extends Controller
@@ -20,9 +22,7 @@ class ApplicationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
-        echo "<pre>";
-        print_r(base_path() . '/vendor/googleplayscraper/autoload.php');
-        exit;
+      
         $controller = $request->path();
         $name = $request->session()->get('name');
         $email = $request->session()->get('email');
@@ -253,14 +253,13 @@ class ApplicationController extends Controller
     }
     
     public function package_name(Request $request, Application $application) {
+     
         if ($request->isMethod('post')) {
             $datas = $request->all();
-            
+           
             $gplay = new \Nelexa\GPlay\GPlayApps();
             $scraper = new Scraper();
-            echo "<pre>";
-            print_r($scraper);
-            exit;
+           
             $response = [];
             $response['code'] = 0;
 
@@ -268,9 +267,7 @@ class ApplicationController extends Controller
             $package_name = str_replace('https://play.google.com/store/apps/details?id=', '', $url);
 
             $ifpackage_name = DB::table('applications')->whereRaw("package_name = '$package_name'")->count();
-            echo "<pre>";
-            print_r($ifpackage_name);
-            exit;
+           
             if ($ifpackage_name > 0) {
                 $response['code'] = 201;
             } else {

@@ -31,7 +31,6 @@
         <script src="<?php echo BASE_PATH ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="<?php echo BASE_PATH ?>plugins/jquery-ui/jquery-ui.js"></script>
         <script src="<?php echo BASE_PATH ?>plugins/jquery-ui/jquery-ui.min.js"></script>
-        
     </head>
 
     <body class="hold-transition skin-blue sidebar-mini">

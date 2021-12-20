@@ -153,6 +153,7 @@
 
     <script type="text/javascript" language="javascript" class="init">
     $(function () {
+                    
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         
         $.ajaxSetup({
@@ -248,19 +249,19 @@
             
             switch (jQuery.parseJSON(response).code) {
                 case 200:
-                    Toasts.fire({
+                    Toast.fire({
                         icon: 'success',
                         title: 'App Live'
                     })
                     return "true"; // <-- the quotes are important!
                 case 201:
-                    Toasts.fire({
+                    Toast.fire({
                         icon: 'warning',
                         title: 'Already Exits'
                     })
                     break;
                 case 401:
-                    Toasts.fire({
+                    Toast.fire({
                         icon: 'error',
                         title: 'Sorry, App Link is Not Live'
                     })

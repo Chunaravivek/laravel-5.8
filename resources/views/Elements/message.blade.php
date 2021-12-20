@@ -1,5 +1,6 @@
 <script type="text/javascript" language="javascript" class="init">
     $(function () {
+        
         <?php if (Session::has('success')) { ?>
         var Success = Swal.mixin({
             toast: true,
